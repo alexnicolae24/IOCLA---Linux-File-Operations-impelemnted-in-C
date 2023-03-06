@@ -1,0 +1,30 @@
+main: In functia main,pentru inceput am initializat si alocat campurile directorului radacina si un sir de caractere ce reprezinta input-ul.Apoi,intr-o instructiune 
+do while a carei conditie era reprezentata de functia fgets ce are rolul de a citi pe rand liniile din input,am folosit functia strtok pentru a separa numele comenzii 
+de argumentele acesteia,iar dupa am identificat prin intermediul unor instructiuni if si a functiei strcmp fiecare comanda,apeland-o corespunzator.
+
+touch: In functia touch,am folosit un algoritm similar cu cel al adaugarii unui nod la finalul unei liste simple inlantuite,dar adaptat unei liste de obiecte de tip File.
+Singura schimbare ar fi afisarea mesajului corespunzator daca un fisier exista deja,pe care am implementat-o cu ajutorul unei variabile ok.
+
+mkdir: In functia mkdir,am facut acelasi lucru ca in functia touch doar ca pentru o lista de obiecte de tip Dir.
+
+ls: In functia ls,am afisat pe rand lista de directoare,iar apoi cea de fisiere.
+
+rm: In functia rm am folosit un algoritm similar cu cel al stergerii unui nod de la finalul unei liste simple inlantuite,dar adaptat unei liste de obiecte de tip File.
+
+rmdir: In functia rmdir am folosit un algoritm similar cu cel al stergerii unui nod de la finalul unei liste simple inlantuite,dar adaptat unei liste de obiecte de 
+tip Dir.Pe langa acest lucru,am incercat ca pentru fiecare director sters sa sterg si fisierele prezente in acesta.
+
+cd: In functia cd,am implementat conditia pentru cd ..,verificand daca numele primit ca parametru coincide cu sirul de carcter ".." si schimband target-ul in 
+parintele acestuia.Apoi,am parcurs lista si am retinut in target elementele care aveau acelasi nume cu cel primit ca parametru,iar daca directorul nu exista se afiseaza 
+mesajul corespunzator.
+
+pwd: In functia pwd,am sters ultimul caracter al fiecarui nume de fisier diferit de "home",deoarece introducea cate un '\n' dupa fiecare.Apoi,am inversat sirul de caractere corespunzator numelui directorului target cu ajutorul functiei revstr,implementata dupa declararea celor doua structuri,iar
+apoi am concatenat acest sir la o variabila auxiliara impreuna cu un caracter "/".Dupa aceea,am copiat ceea ce am obtinut in variabila auxiliara aux in sirul path.pe care
+la randul sau l-am inversat cu functia precizata precedent.
+
+tree: In functia tree,am incercat un algoritm similar cu cel din functia ls,dar trece testul doar pentru nivelul 0.
+
+mv: In functia mv,am parcurs listele de directoare si de fisiere,iar pentru directoare am folosit functia rmdir si mkdir,iar pentru fisiere am folosit rm si touch.Insa,
+este trecut doar testul pentru mv_no_file.
+
+
